@@ -167,3 +167,22 @@ const groups = [
 //     }
 // })
 // console.log(studentsWithGroupInfo)
+
+
+
+// 例 021 - 生成器构造无穷斐波那数例
+// function *fibonacci() {
+//     let a = 1
+//     let b = 1
+//     yield a
+//     yield b
+//     while(true) {
+//         const t = b
+//         b = a + b
+//         a = t
+//         yield b
+//     }
+// }
+// const it = fibonacci()
+// const feb20 = Array.from(Array(20),it.next,it).map(x => x.value)
+// console.log(feb20)
