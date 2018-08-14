@@ -186,3 +186,34 @@ const groups = [
 // const it = fibonacci()
 // const feb20 = Array.from(Array(20),it.next,it).map(x => x.value)
 // console.log(feb20)
+
+// 补一下关于const的知识点
+// 1、用const 声明一个普通的变量，那么这个变量的值就不可更改了
+// 2、用const 声明一个对象、数组、函数类型的值，里面的值是可以改变的
+
+
+
+// 例24 -笛卡儿积
+// 集合XC和Y的笛卡儿积可以表示为:A×B = {(x,y)|x∈A∧y∈B},写一个函数，求数组的笛卡尔积
+// 例如： [1,2] x ['a','b'] = [[1,'a],[1,'b],[2,'a],[2,'b]]
+// 解题的时候需要想到的是这里面参数不止是两个数组相乘，还可能是多个数组相乘，这一点是在自己在解题的时候容易忘记的，要记住
+// 这里用了一个对参数的解构，传入的参数是Matrix的每一项
+// function cartesianProduct(...Matrix) {
+//     if(Matrix.length === 0) {return []}
+//     if(Matrix.length === 1) {return Matrix[0]}
+//     return Matrix.reduce((A,B) => {
+//        const product = []
+//        for(let i = 0; i < A.length; i++){
+//            for(let j = 0; j < B.length; j++) {
+//                product.push(
+//                    Array.isArray(A[i]) ? [...A[i],B[j]] : [A[i],B[j]]
+//                )
+//            }
+//        }
+//        return product
+//     })
+// }
+// const arr = cartesianProduct([1,2,3],['a','b','c','d'],[1,2,3,4,5,6,12,34,56,34])
+// console.log(arr)
+
+
