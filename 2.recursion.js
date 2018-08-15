@@ -1,4 +1,4 @@
-// 递归
+﻿// 递归
 // 当事物用它本身定义自己，就会发生递归
 
 //例027 - 阶乘
@@ -131,7 +131,10 @@
         new Tree(5),
         new Tree(3,[
             new Tree(7),
-            new Tree(11)
+            new Tree(11,[
+                new Tree(3),
+                new Tree(2)
+            ])
         ]),
         new Tree(2)
     ])
@@ -176,7 +179,7 @@
     //         callback(tree.v)
     //         return
     //     }
-    //     tree.children.array.forEach((child,i) => {
+    //     tree.children.forEach((child,i) => {
     //         if(i === ord ) {
     //            transversed = true
     //            callback(tree.v) 
