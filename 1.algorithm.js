@@ -216,4 +216,13 @@ const groups = [
 // const arr = cartesianProduct([1,2,3],['a','b','c','d'],[1,2,3,4,5,6,12,34,56,34])
 // console.log(arr)
 
+// 全排列简单解
+//P(A) = a1P(A-a1)ua2P(A-a2)U...UanP(A-an)
+//P[1,2,3,4] = 1 P [2,3,4] U 2P[1,3,4] 3P[1,2,4]U 4 P[1,2,3]
+function perm(A) {
+    if(A.length ===1) {return [A]}
+    return [].concat(...A.map((a,i)=>perm(A.slice(0,i).concat(A.slice(i+1))).map(p=>[a].concat(p))))
+}
+
+console.log(perm(['a','b','c']))
 
