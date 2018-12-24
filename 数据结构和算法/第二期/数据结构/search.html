@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>广度优先遍历和深度优先遍历</title>
+</head>
+<body>
+    <div id="root">
+        <ul>
+            <li>
+                <a></a>
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+        <h1><span></span></h1>
+    </div>
+    <script>
+        // DOM树的深度优先遍历和广度优先遍历
+        // 深度优先(Stack)
+        // 广度优先(Queue)
+
+        // 深度优先
+        function depth_first_search(node) {
+            const stack = [node]
+            while(stack.length>0) {
+                const item = stack.pop()
+                console.log(item.tagName)
+                for(let i = item.children.length-1;i>=0;i--) {
+                    stack.push(item.children[i])
+                }
+            }
+        }
+
+        const root = document.getElementById('root')
+        // depth_first_search(root)
+
+        // 广度优先(queue)
+        function *breadth_first_search(node) {
+            const queue = [node]
+            while(queue.length>0) {
+                const item = queue.pop()
+                yield item.tagName
+                for(let i = 0;i<=item.children.length-1;i++) {
+                    queue.unshift(item.children[i])
+                }
+            } 
+        }
+        console.log([...breadth_first_search(root)])
+    </script>
+</body>
+</html>
