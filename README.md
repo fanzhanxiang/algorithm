@@ -65,8 +65,8 @@ git diff commitId filepath 与某一次提交进行比较
 ## 撤销
 -  从暂存区中将工作区内容覆盖掉
 ```
-git chechout 文件名
-git reset HEAD 文件名 回到上一次的缓存区
+git chechout --文件名
+git reset HEAD --文件名 回到上一次的缓存区
 ```
 
 ## 回滚历史版本
@@ -76,7 +76,24 @@ git reset --hard 版本号
 git reflog 查看所有版本 
 ```
 
+## 创建分支
+```
+git branch 分支名
+git branch 查看分支
+```
 
+## 切换分支
+
+```
+git checkout 分支名
+```
+
+## 删除分支
+
+```
+ git branchout -D 分支名
+```
+> 删除分支时当前用户不能在当前要删除的分支上
 ##linux命令
 - vi文件名
 - i插入模式 esc 退出编辑模式 :q!强制退出 :wq保存并退出
