@@ -93,7 +93,14 @@ git checkout 分支名
 ```
  git branchout -D 分支名
 ```
+
 > 删除分支时当前用户不能在当前要删除的分支上
+
+## 创建并切换
+
+ ```
+ git checkout -b 分支名 
+ ```
 ##linux命令
 - vi文件名
 - i插入模式 esc 退出编辑模式 :q!强制退出 :wq保存并退出
