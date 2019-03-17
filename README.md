@@ -66,6 +66,14 @@ git diff commitId filepath 与某一次提交进行比较
 -  从暂存区中将工作区内容覆盖掉
 ```
 git chechout 文件名
+git reset HEAD 文件名 回到上一次的缓存区
+```
+
+## 回滚历史版本
+
+```
+git reset --hard 版本号
+git reflog 查看所有版本
 ```
 
 
