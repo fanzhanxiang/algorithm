@@ -101,6 +101,15 @@ git checkout 分支名
  ```
  git checkout -b 分支名 
  ```
+
+ ## 当文件修改切换分支
+
+ ```
+ git stash 暂存文件
+ git stash pop 还原暂存的内容
+ ```
+
+ > 分支有更改不能直接切换、可以提交更改或者暂存更改
 ##linux命令
 - vi文件名
 - i插入模式 esc 退出编辑模式 :q!强制退出 :wq保存并退出
