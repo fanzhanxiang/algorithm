@@ -47,6 +47,28 @@ git commit -m '消息'
 git log
 ```
 
+## 比较
+
+```
+filepath是文件路径，可以指定文件、也可以指定某个文件夹
+
+git diff  filepath 工作区与暂存区比较
+
+git diff HEAD filepath 工作区与HEAD ( 当前工作分支) 比较
+
+git diff --staged 或 --cached  filepath 暂存区与HEAD比较
+
+git diff branchName filepath  当前分支的文件与branchName 分支的文件进行比较
+
+git diff commitId filepath 与某一次提交进行比较
+```
+## 撤销
+-  从暂存区中将工作区内容覆盖掉
+```
+git chechout 文件名
+```
+
+
 ##linux命令
 - vi文件名
 - i插入模式 esc 退出编辑模式 :q!强制退出 :wq保存并退出
