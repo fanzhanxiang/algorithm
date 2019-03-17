@@ -73,7 +73,7 @@ git reset HEAD 文件名 回到上一次的缓存区
 
 ```
 git reset --hard 版本号
-git reflog 查看所有版本
+git reflog 查看所有版本 
 ```
 
 
