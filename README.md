@@ -120,6 +120,18 @@ git checkout 分支名
  ## 解决冲突
  - 遇到冲突时只能手动的解决冲突，留下想要的结果再次提交
 
+
+## 推送代码
+
+```
+git push origin master
+```
+## 拉取最新的代码
+
+```
+git pull origin master
+
+```
 ##linux命令
 - vi文件名
 - i插入模式 esc 退出编辑模式 :q!强制退出 :wq保存并退出
