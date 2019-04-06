@@ -1,0 +1,18 @@
+第一个网页：知乎用户数据的饼图，数据在zhihu.txt的user数组中
+
+第二个网页：知乎回答数据的饼图，数据在zhihu.txt的answer数组中
+
+第三个网页：左边是问题以及回答的列表（zhihu2.txt），右边是用户以及相关热度值（zhihu3.txt）
+
+
+
+关于头像链接，比如https://pic3.zhimg.com/v2-79e4ab127727ecd0df2d0f796d66f60e.jpg
+这个太大了，后续我已经修改成了
+	               https://pic3.zhimg.com/v2-79e4ab127727ecd0df2d0f796d66f60e_im.jpg
+就是后面加个_im就能获取到小头像了
+
+要再抓取数据太麻烦了，你先凑和着用吧
+
+
+关于用户主页，https://www.zhihu.com/people/xiamengqian/activities
+token=‘xiamengqian’，只要知道token就可以拼接主页了
