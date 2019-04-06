@@ -1,6 +1,6 @@
 // import Vue from 'vue'
 // import Router from 'vue-router'
-import Test from '@/components/Test'
+import Display from '@/components/Display'
 import User from '@/components/FinalDesign/User'
 import Race from '@/components/FinalDesign/Race'
 import Answer from '@/components/FinalDesign/Answer'
@@ -10,8 +10,8 @@ const router = {
   routes: [
     {
       path: '/',
-      name: 'Test',
-      component: Test,
+      name: 'display',
+      component: Display,
       redirect: 'user',
       children: [
         {
