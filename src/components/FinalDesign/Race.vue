@@ -11,14 +11,13 @@ export default {
   },
   methods: {},
   mounted () {},
-  created() {
+  created () {
     this.axios.get('http://localhost:8081/raceHot').then((res) => {
-      const raceHotData = res.data.data
+      // const raceHotData = res.data.data
     })
     this.axios.get('http://localhost:8081/raceList').then((res) => {
-      const raceListData = res.data.data
+      // const raceListData = res.data.data
     })
-
   }
 }
 </script>
