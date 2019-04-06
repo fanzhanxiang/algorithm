@@ -34,19 +34,18 @@ export default {
   created () {
     this.axios.get('http://localhost:8081/answer').then((res) => {
       const userData = res.data.data
-      let userDataKeys = Object.keys(userData)
       let userDataValue = Object.values(userData)
 
-      for(let i = 0; i < userDataValue.length; i++) {
+      for (let i = 0; i < userDataValue.length; i++) {
         let againUserDataValue = Object.values(userDataValue[i])
         let againUserDataKeys = Object.keys(userDataValue[i])
-        let legendData = `${'legendData' + (i+1)}`
+        let legendData = `${'legendData' + (i + 1)}`
         this[legendData] = Object.keys(userDataValue[i])
-        for(let n = 0; n < againUserDataValue.length; n++) {
+        for (let n = 0; n < againUserDataValue.length; n++) {
           let obj = {}
           obj.value = againUserDataValue[n]
           obj.name = againUserDataKeys[n]
-          let chartData = `${'chartData' + (i+1)}`
+          let chartData = `${'chartData' + (i + 1)}`
           this[chartData].push(obj)
           obj = {}
         }
@@ -58,4 +57,3 @@ export default {
 
 <style scoped>
 </style>
-
