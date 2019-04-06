@@ -1,0 +1,77 @@
+Array
+(
+    [0] => Array			第一个数组表示用户数据
+        (
+            [0] => Array
+                (
+                    [nickname] => 秋倏	用户名
+                    [photo_url] => https://pic4.zhimg.com/v2-5d9b12915fa6fb53f6c50a80cdf57042.jpg	用户头像
+                )
+
+            [1] => Array
+                (
+                    [nickname] => 白诗诗
+                    [photo_url] => https://pic4.zhimg.com/v2-f50f0c9d6b74e55aef3b56ab43ac96a1.jpg
+                )
+
+            [2] => Array
+                (
+                    [nickname] => 程归子
+                    [photo_url] => https://pic1.zhimg.com/9c1bdf78595a196e26a073b453752d02.jpg
+                )
+
+            [3] => Array
+                (
+                    [nickname] => 歌者的影子
+                    [photo_url] => https://pic4.zhimg.com/v2-2000d27894bae82297bd13fc43602fa9.jpg
+                )
+
+            [4] => Array
+                (
+                    [nickname] => 槿年
+                    [photo_url] => https://pic1.zhimg.com/v2-ed40bc84ed051a8be7df19e8ea984361.jpg
+                )
+
+            [5] => Array
+                (
+                    [nickname] => 风丰
+                    [photo_url] => https://pic4.zhimg.com/v2-21953588f9acabae69b8675b0b4e0995.jpg
+                )
+
+            [6] => Array
+                (
+                    [nickname] => 彼得威
+                    [photo_url] => https://pic4.zhimg.com/d09a9868c1d9ccc16ca18f517bc52c91.jpg
+                )
+
+            [7] => Array
+                (
+                    [nickname] => 秋倏
+                    [photo_url] => https://pic3.zhimg.com/v2-e387d7ae2c9974cbf1c584e91e55f63e.jpg
+                )
+
+            [8] => Array
+                (
+                    [nickname] => 戈玄白
+                    [photo_url] => https://pic3.zhimg.com/v2-de10230a73f1603ffc090b2cbc47ccd0.jpg
+                )
+
+            [9] => Array
+                (
+                    [nickname] => 李晨子
+                    [photo_url] => https://pic4.zhimg.com/v2-341fb93c15f9cf314aceee11553263f8.jpg
+                )
+
+        )
+
+    [1] => Array		//第二个表示问题以及回答的数据
+        (
+            [0] => Array
+                (
+                    [count] => 1345.0000
+                    [token] => hu-hao-ran-80-68
+                    [question_url] => https://www.zhihu.com/question/22726426		问题链接
+                    [content] => 我是一名卷帘大将，负责给玉帝和帝后挑帘子。时间长了，我成了玉帝的心腹，他做什么都喜欢带着我。
+	  [title] => 野球场上，你见过最装逼的是什么？		问题
+                    [score] => 618.2500
+）
