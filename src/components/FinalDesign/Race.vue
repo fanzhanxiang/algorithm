@@ -6,11 +6,14 @@
         <Panel v-for="(item,index) in raceListData" :key="index">
             {{item.title}}
             <div slot="content">
-               <div @click="jumptoDetail(item)" style="cursor:pointer;">
+               <div @click="jumptoDetail(item)" style="cursor:pointer; display:inline-block;width:50%">
                   <Avatar shape="square" :src="item.photo_url" />
-                  <h3 style="display:inline-block;">{{item.nickname}}</h3>
+                  <h3 style="margin-left:10px;display:inline-block;">{{item.nickname}}</h3>
                </div>
-              {{item.content}}
+               <div style="display:inline-block;float:right;">
+                  <el-button @click="jumptoZhihu(item)" type="primary" size ='small' round>到知乎</el-button>
+               </div>
+              <div style="clear:both;margin-top:20px;">{{item.content}}</div>
               </div>
         </Panel>
       </Collapse>
@@ -64,12 +67,19 @@ export default {
       let token = item.token
       let personInfo = `https://www.zhihu.com/people/${token}/activities`
       window.location.href = personInfo
+    },
+    jumptoZhihu (item) {
+      let zhihuURL = item.question_url
+      window.location.href = zhihuURL
     }
   },
   mounted () {},
   created () {
     this.axios.get('http://localhost:8081/raceHot').then((res) => {
       const raceHotData = res.data.data
+      for (let i = 0; i < raceHotData.length; i++) {
+        raceHotData[i].photo_url = `https://images.weserv.nl/?url=${raceHotData[i].photo_url}`
+      }
       raceHotData.sort((a, b) => {
         return Number(b.count) - Number(a.count)
       })
@@ -79,8 +89,10 @@ export default {
     })
     this.axios.get('http://localhost:8081/raceList').then((res) => {
       const raceListData = res.data.data
+      for (let i = 0; i < raceListData.length; i++) {
+        raceListData[i].photo_url = `https://images.weserv.nl/?url=${raceListData[i].photo_url}`
+      }
       this.raceListData = raceListData
-      console.log(raceListData, 'raceListData')
     })
   }
 }
