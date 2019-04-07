@@ -8,8 +8,11 @@ import newRouter from './router'
 import ElementUI from 'element-ui'
 import echarts from 'echarts'
 import 'element-ui/lib/theme-chalk/index.css'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
 
 Vue.use(VueAxios, axios)
+Vue.use(iView)
 // 使用axios,通过this访问，比如下面这种用法
 // this.axios.get('api/getNewsList').then((response)=>{
 //   this.newsList=response.data.data;

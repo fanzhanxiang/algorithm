@@ -1,7 +1,21 @@
 <template>
  <div>
   <el-container>
-    <el-main>Main</el-main>
+    <el-main>
+      <Collapse v-model="value" v-if="raceListData" accordion>
+        <Panel v-for="(item,index) in raceListData" :key="index">
+            {{item.title}}
+            <div slot="content">
+               <div @click="jumptoDetail(item)" style="cursor:pointer;">
+                  <Avatar shape="square" :src="item.photo_url" />
+                  <h3 style="display:inline-block;">{{item.nickname}}</h3>
+               </div>
+              {{item.content}}
+              </div>
+        </Panel>
+      </Collapse>
+    </el-main>
+
     <el-aside width="25%">
       <el-table
         v-if="tableData.length"
@@ -16,7 +30,7 @@
           label="姓名"
           width="200">
             <template slot-scope="scope">
-              <el-button style="width:40px;height:40px;" @click="handleEdit(scope.$index, scope.row)" circle><img style="width:100%;height: auto;border-radius:50%;overflow:hidden;" :src="scope.row.photo_url" /></el-button>
+              <span style="cursor:pointer" @click="handleEdit(scope.$index, scope.row)"><Avatar  :src="scope.row.photo_url" /></span>
               <span style="margin-left: 10px">{{ scope.row.nickname }}</span>
             </template>
         </el-table-column>
@@ -35,7 +49,9 @@
 export default {
   data () {
     return {
-      tableData: []
+      tableData: [],
+      value: '0',
+      raceListData: ''
     }
   },
   methods: {
@@ -43,6 +59,11 @@ export default {
       let token = row.token
       let url = `https://www.zhihu.com/people/${token}/activities`
       window.location.href = url
+    },
+    jumptoDetail (item) {
+      let token = item.token
+      let personInfo = `https://www.zhihu.com/people/${token}/activities`
+      window.location.href = personInfo
     }
   },
   mounted () {},
@@ -55,10 +76,10 @@ export default {
       for (let i = 0; i < raceHotData.length; i++) {
         this.tableData.push(raceHotData[i])
       }
-      console.log(raceHotData)
     })
     this.axios.get('http://localhost:8081/raceList').then((res) => {
       const raceListData = res.data.data
+      this.raceListData = raceListData
       console.log(raceListData, 'raceListData')
     })
   }
